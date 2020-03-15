@@ -2,7 +2,7 @@ package com.ccifuentes.beerservice.web.controller;
 
 import com.ccifuentes.beerservice.utils.BaseMvcTest;
 import com.ccifuentes.beerservice.web.model.BeerDto;
-import com.ccifuentes.beerservice.web.model.BeerStyle;
+import com.ccifuentes.beerservice.domain.BeerStyle;
 import lombok.SneakyThrows;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

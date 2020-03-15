@@ -1,4 +1,4 @@
-package com.ccifuentes.beerservice.web.model;
+package com.ccifuentes.beerservice.domain;
 
 public enum BeerStyle {
     LAGER, PILSNER, STOUT, GOSE, PORTER, ALE, WHEAT, IPA, PALE_ALE, SAISON

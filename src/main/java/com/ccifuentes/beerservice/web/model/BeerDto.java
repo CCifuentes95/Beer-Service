@@ -1,5 +1,6 @@
 package com.ccifuentes.beerservice.web.model;
 
+import com.ccifuentes.beerservice.domain.BeerStyle;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
