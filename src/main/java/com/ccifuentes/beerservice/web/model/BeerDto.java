@@ -21,6 +21,6 @@ public class BeerDto {
     private BigDecimal price;
     private Integer quantity;
     private LocalDateTime createdDate;
-    private LocalDateTime lastUpdatedDate;
+    private LocalDateTime modifiedDate;
 
 }
