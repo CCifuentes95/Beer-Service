@@ -35,7 +35,7 @@ public class Bootstrap implements CommandLineRunner {
 
         Beer b1 = Beer.builder()
                 .beerName("Mango Bobs")
-                .beerStyle(BeerStyle.IPA.name())
+                .beerStyle(BeerStyle.IPA)
                 .minOnHand(12)
                 .quantityToBrew(200)
                 .price(new BigDecimal("12.95"))
@@ -44,7 +44,7 @@ public class Bootstrap implements CommandLineRunner {
 
         Beer b2 = Beer.builder()
                 .beerName("Galaxy Cat")
-                .beerStyle(BeerStyle.PALE_ALE.name())
+                .beerStyle(BeerStyle.PALE_ALE)
                 .minOnHand(12)
                 .quantityToBrew(200)
                 .price(new BigDecimal("6.95"))
@@ -53,7 +53,7 @@ public class Bootstrap implements CommandLineRunner {
 
         Beer b3 = Beer.builder()
                 .beerName("Pinball Porter")
-                .beerStyle(BeerStyle.PALE_ALE.name())
+                .beerStyle(BeerStyle.PALE_ALE)
                 .minOnHand(12)
                 .quantityToBrew(200)
                 .price(new BigDecimal("15.95"))

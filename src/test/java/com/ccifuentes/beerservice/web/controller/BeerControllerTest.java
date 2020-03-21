@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.http.MediaType;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
@@ -23,15 +24,26 @@ class BeerControllerTest extends BaseMvcTest {
     void setUp() {
         validBeer = BeerDto.builder()
                 .id(UUID.randomUUID())
-                .name("Corona")
+                .beerName("Corona")
                 .beerStyle(BeerStyle.PALE_ALE)
                 .upc(12345L)
+                .quantityToBrew(200)
+                .price(new BigDecimal("12.95"))
                 .build();
     }
 
     @Test
     @SneakyThrows
     void index_getCorrectStatus() {
+        mockMvc.perform(get("/api/v1/beer/")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+    }
+
+    @Test
+    @SneakyThrows
+    void findById_getCorrectStatus() {
+        assert validBeer.getId() != null;
         mockMvc.perform(get("/api/v1/beer/" + validBeer.getId().toString())
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk());
@@ -67,6 +79,7 @@ class BeerControllerTest extends BaseMvcTest {
     @Test
     @SneakyThrows
     void delete_getCorrectStatus() {
+        assert validBeer.getId() != null;
         mockMvc.perform(delete("/api/v1/beer/" + validBeer.getId().toString())
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isNoContent());
