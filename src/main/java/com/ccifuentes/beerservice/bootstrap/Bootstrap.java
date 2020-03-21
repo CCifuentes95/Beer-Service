@@ -3,6 +3,7 @@ package com.ccifuentes.beerservice.bootstrap;
 import com.ccifuentes.beerservice.domain.Beer;
 import com.ccifuentes.beerservice.domain.BeerStyle;
 import com.ccifuentes.beerservice.repository.BeerRepository;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -11,6 +12,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @Slf4j
+@RequiredArgsConstructor
 @Component
 public class Bootstrap implements CommandLineRunner {
 
@@ -19,10 +21,6 @@ public class Bootstrap implements CommandLineRunner {
     public static final String BEER_3_UPC = "0083783375213";
 
     private final BeerRepository beerRepository;
-
-    public Bootstrap(BeerRepository beerRepository) {
-        this.beerRepository = beerRepository;
-    }
 
     @Override
     public void run(String... args){
