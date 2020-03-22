@@ -1,4 +1,4 @@
-package com.ccifuentes.beerservice.exception;
+package com.ccifuentes.beerservice.web.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

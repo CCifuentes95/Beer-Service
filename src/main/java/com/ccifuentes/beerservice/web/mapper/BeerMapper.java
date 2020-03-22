@@ -1,4 +1,4 @@
-package com.ccifuentes.beerservice.mapper;
+package com.ccifuentes.beerservice.web.mapper;
 
 import com.ccifuentes.beerservice.domain.Beer;
 import com.ccifuentes.beerservice.web.model.BeerDto;
