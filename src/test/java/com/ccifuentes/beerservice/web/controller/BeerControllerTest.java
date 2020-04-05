@@ -80,7 +80,7 @@ class BeerControllerTest extends BaseMvcTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andDo(
-                        document("v1/beer/",
+                        document("v1/beer-get/",
                                 pathParameters(
                                         parameterWithName("beerId").description("UUID of the desired beer to get")
                                 ),
@@ -110,7 +110,7 @@ class BeerControllerTest extends BaseMvcTest {
                 .content(beerDtoJson))
                 .andExpect(status().isCreated())
                 .andDo(
-                        document("v1/beer/",
+                        document("v1//beer-new/",
                                 requestFields(
                                         fields.withPath("id").ignored(),
                                         fields.withPath("version").ignored(),
