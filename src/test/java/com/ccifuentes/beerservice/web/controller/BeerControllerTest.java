@@ -1,6 +1,5 @@
 package com.ccifuentes.beerservice.web.controller;
 
-import com.ccifuentes.beerservice.domain.Beer;
 import com.ccifuentes.beerservice.domain.BeerStyle;
 import com.ccifuentes.beerservice.service.BeerService;
 import com.ccifuentes.beerservice.utils.BaseMvcTest;
@@ -74,7 +73,7 @@ class BeerControllerTest extends BaseMvcTest {
     @Test
     @SneakyThrows
     void findById_getCorrectStatus() {
-        when(beerService.findById(any())).thenReturn(Optional.of(Beer.builder().build()));
+        when(beerService.findByIdDto(any())).thenReturn(Optional.of(BeerDto.builder().build()));
 
         mockMvc.perform(get("/api/v1/beer/{beerId}", UUID.randomUUID().toString())
                 .accept(MediaType.APPLICATION_JSON))
